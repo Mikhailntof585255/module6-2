@@ -27,11 +27,12 @@ class Vehicle:
             new_color = __color
             print(f'Нельзя сменить цвет на {new_color}')
 
-    def owner(self,owner:str):
-        return print(f'Владелец: {owner}')
+        def get_owner(self,owner:str):
+        return print(f'Владелец: {self.owner}')
 
     def print_info (self,__model:str,__engine_power:int,__color:str,owner:str):
-        return print(f"Mарка:{__model},  Мощность двигателя:{__engine_power},  Цвет:{__color},  Владелец:{owner}")
+         print(f"{self.get_model(__model)}, {self.get_horsepower(__engine_power)}, {self.get_color(__color)}, {self.get_owner(owner)}")
+
 
 class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
